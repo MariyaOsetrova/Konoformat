@@ -26,7 +26,7 @@ public class KinoteatrYaroslavlInfoTest extends TestBase {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
     @Test
-    @DisplayName("Проверка информации о кинотеатре в г. Ярославль")
+    @DisplayName("Информация о кинотеатре в г. Ярославль")
     public void cinemasSections() {
         step("Подтверждение города 'Ярославль'", () -> {
             cityСonfirmationForms.selectQuestionButtons();

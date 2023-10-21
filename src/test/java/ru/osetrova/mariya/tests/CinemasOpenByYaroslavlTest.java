@@ -27,9 +27,9 @@ public class CinemasOpenByYaroslavlTest extends TestBase {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
     @Test
-    @DisplayName("Открытрие сайта кинотеатра с проверкой существующих разделов")
+    @DisplayName("Открытрие сайта кинотеатра на главное странице")
     public void cinemasSections() {
-        step("Проверить, что открыта главная страница сайта", () -> {
+        step("Открыта главная страница сайта", () -> {
             kinoteatrPage.homePage();
             attachScreenshot();
         });
