@@ -21,7 +21,7 @@ public class KinoteatrYaroslavlInfoTest extends TestBase {
     KinoteatrHomePage kinoteatrPage = new KinoteatrHomePage();
     СityСonfirmationForms cityСonfirmationForms = new СityСonfirmationForms();
     YaroslavlInfoPage yaroslavlInfo = new YaroslavlInfoPage();
-    @Attachment(value = "Мой любимый скриншот", type = "image/png", fileExtension = "png")
+    @Attachment(value = "Скриншот шага", type = "image/png", fileExtension = "png")
     public byte[] attachScreenshot() {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
