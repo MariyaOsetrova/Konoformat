@@ -15,8 +15,8 @@ import ru.osetrova.mariya.pages.СityСonfirmationForms;
 
 import static io.qameta.allure.Allure.step;
 @Feature("ИПР")
-@Owner("Осетрова Мария") // кто тест писал в отчтете
-@Story("Открытрие сайта кинотеатра 'Киноформат'") // название в алюре
+@Owner("Осетрова Мария") // кто тест писал в отчете
+@Story("Открытрие сайта кинотеатра 'Киноформат'") // название в аллюре
 public class KinoteatrYaroslavlInfoTest extends TestBase {
     KinoteatrHomePage kinoteatrPage = new KinoteatrHomePage();
     СityСonfirmationForms cityСonfirmationForms = new СityСonfirmationForms();
