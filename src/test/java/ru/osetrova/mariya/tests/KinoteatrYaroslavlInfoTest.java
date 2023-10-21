@@ -16,7 +16,7 @@ import ru.osetrova.mariya.pages.СityСonfirmationForms;
 import static io.qameta.allure.Allure.step;
 @Feature("ИПР")
 @Owner("Осетрова Мария") // кто тест писал в отчете
-@Story("Открытрие сайта кинотеатра 'Киноформат'") // название в аллюре
+@Story("Сайт кинотеатра 'Киноформат' в г. Ярославле. Раздел 'Кинотеарты'") // название в аллюре
 public class KinoteatrYaroslavlInfoTest extends TestBase {
     KinoteatrHomePage kinoteatrPage = new KinoteatrHomePage();
     СityСonfirmationForms cityСonfirmationForms = new СityСonfirmationForms();
@@ -38,27 +38,27 @@ public class KinoteatrYaroslavlInfoTest extends TestBase {
             attachScreenshot();
         });
 
-        step("Проверка, что открыт раздел 'Кинотераты' г. Ярославль", () -> {
+        step("Открыт раздел 'Кинотераты' г. Ярославль", () -> {
             yaroslavlInfo.checkQuestionButtons();
         });
 
-        step("Проверка, что отображается корректрный адрес кинотеатра г. Ярославль", () -> {
+        step("Отображение адреса кинотеатра г. Ярославль", () -> {
             yaroslavlInfo.checkCinemaAddress();
         });
 
-        step("Проверка, что отображается информация о зале кинотеатра г. Ярославль", () -> {
+        step("Отображение информации о зале кинотеатра г. Ярославль", () -> {
             yaroslavlInfo.checkCinemaInfo();
         });
 
-        step("Проверка, что отображается кнопка просмотра расписания в кинотеатре г. Ярославль", () -> {
+        step("Отображение кнопки просмотра расписания в кинотеатре г. Ярославль", () -> {
             yaroslavlInfo.checkButtonSchedule();
         });
 
-        step("Проверка, что отображается кнопка просмотра расписания в кинотеатре г. Ярославль", () -> {
+        step("Отображение информации о количестве кинозалов и посадочных мест в кинотеатре г. Ярославль", () -> {
             yaroslavlInfo.checkCountRoom();
         });
 
-        step("Проверка, что отображается контактная информация о кинотеатре г. Ярославль", () -> {
+        step("Отображение контактной информации о кинотеатре г. Ярославль", () -> {
             yaroslavlInfo.checkContactInfo();
             attachScreenshot();
         });

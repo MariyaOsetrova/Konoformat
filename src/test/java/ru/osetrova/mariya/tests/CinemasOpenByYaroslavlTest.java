@@ -16,7 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 @Feature("ИПР")
 @Owner("Осетрова Мария") // кто тест писал в отчтете
-@Story("Открытрие сайта кинотеатра 'Киноформат'") // название в алюре
+@Story("Главная страница сайта кинотеатра 'Киноформат'") // название в алюре
 
 public class CinemasOpenByYaroslavlTest extends TestBase {
 
@@ -34,21 +34,21 @@ public class CinemasOpenByYaroslavlTest extends TestBase {
             attachScreenshot();
         });
 
-        step("Проверить наличие иконки", () -> {
+        step("Отображенеи логотипа", () -> {
             kinoteatrPage.checkLogo();
         });
 
-        step("Проверить разделы на странице", () -> {
+        step("Отобраение разделов на странице", () -> {
             kinoteatrPage.checkSections();
             attachScreenshot();
         });
 
-        step("Проверить отображение формы подтверждения города", () -> {
+        step("Отображение формы подтверждения города", () -> {
             cityСonfirmationForms.checkRegionSelectQuestion();
             attachScreenshot();
         });
 
-        step("Подтвердить город на форме", () -> {
+        step("Выбор города 'Ярославль'", () -> {
             cityСonfirmationForms.selectQuestionButtons();
             attachScreenshot();
         });

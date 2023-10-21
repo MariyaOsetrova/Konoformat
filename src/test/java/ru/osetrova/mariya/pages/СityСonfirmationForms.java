@@ -16,7 +16,7 @@ public class СityСonfirmationForms {
             regions = $(".regions-select-region/*[contains(text(),'Ярославль')]"),
             regionsWindow = $(".regions-select-dialog-window"),
             regionsWindowYar = $x("//div[contains(text(),'Ярославль')]");
-    @Step("Отображение формы поддтверждение города")
+    @Step("Проверка отображения формы поддтверждение города")
     public void checkRegionSelectQuestion(){
         formSelectQuestion.shouldBe(visible); // проверка отображения формы
         titleForm.shouldBe(visible);
