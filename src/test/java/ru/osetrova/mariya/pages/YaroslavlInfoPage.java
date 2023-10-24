@@ -6,12 +6,13 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class YaroslavlInfoPage {
-    public static SelenideElement
+    private SelenideElement
             cinemas = $(".active/*[contains(text(),'Кинотеатры')]"),
             title1 = $x("//h2[contains(text(),'КИНОтеатр')]"),
             title2 = $(".title_cinema/*[contains(text(),'КИНОФОРМАТ ЯРОСЛАВЛЬ')]"),
-            address = $(".cinema-address"),
-            info = $x("//div//p [@class='cinema-desc']"),
+            cinemaCard = $(".full-cinema-card "),
+            address = cinemaCard.$(".cinema-address"),
+            info = cinemaCard.$(".cinema-desc"),
             schedule = $(".podr/*[contains(text(),'Расписание')]"),
             room = $(".count-room"),
             telephone = $x("//div[@class='contact-info']//p[1]"),
@@ -21,6 +22,7 @@ public class YaroslavlInfoPage {
     @Step("Проверка, что открыт раздел 'Кинотераты' г. Ярославль")
     public void checkQuestionButtons(){
         cinemas.shouldBe(visible);
+        cinemas.shouldHave(cssClass("active"));
         cinemas.should(cssValue("color", "rgba(198, 22, 141, 1)"));
         title1.shouldBe(visible);
         title2.shouldBe(visible);
