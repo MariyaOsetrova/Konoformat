@@ -7,12 +7,12 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class СityСonfirmationForms {
-    public static SelenideElement
+    private SelenideElement
             yar = $x("//div[contains(text(),'Ваш город Ярославль?')]"),
             formSelectQuestion = $("div.regions-select-question"),
             titleForm = $("div.regions-select-question-text"),
-            yesButton = $("div.regions-select-question-buttons button:nth-child(1)"), //элементы внутри родительского элемента https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
-            noButton = $("div.regions-select-question-buttons button:nth-child(2)"), // https://htmlbook.ru/css/nth-child
+            yesButton = formSelectQuestion.$("button:first-child"),//$("div.regions-select-question-buttons button:nth-child(1)"), //элементы внутри родительского элемента https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+            noButton = formSelectQuestion.$("[data-role='question.no']"),//чистый код: data-role='question.yes, скорее всего не изменяемый локатор $("div.regions-select-question-buttons button:nth-child(2)"), // https://htmlbook.ru/css/nth-child
             regions = $(".regions-select-region/*[contains(text(),'Ярославль')]"),
             regionsWindow = $(".regions-select-dialog-window"),
             regionsWindowYar = $x("//div[contains(text(),'Ярославль')]");

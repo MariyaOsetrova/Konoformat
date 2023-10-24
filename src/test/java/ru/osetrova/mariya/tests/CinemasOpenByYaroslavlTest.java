@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import ru.osetrova.mariya.pages.KinoteatrHomePage;
 import ru.osetrova.mariya.pages.СityСonfirmationForms;
+import static com.codeborne.selenide.Condition.text;
 
 import static io.qameta.allure.Allure.step;
 
@@ -30,7 +31,7 @@ public class CinemasOpenByYaroslavlTest extends TestBase {
     @DisplayName("Открытрие сайта кинотеатра на главное странице")
     public void cinemasSections() {
         step("Открыта главная страница сайта", () -> {
-            kinoteatrPage.homePage();
+            kinoteatrPage.checkIsHomePage();
             attachScreenshot();
         });
 
@@ -41,6 +42,13 @@ public class CinemasOpenByYaroslavlTest extends TestBase {
         step("Отобраение разделов на странице", () -> {
             kinoteatrPage.checkSections();
             attachScreenshot();
+        });
+
+        step("Отображение меню навигации", ()->{
+            kinoteatrPage
+                    .checkNavigationFilms(text("Фильмы"))
+                    .checkNavigationSchdeule(text("Расписание"))
+                    .checkNavigationStock(text("Акции"));
         });
 
         step("Отображение формы подтверждения города", () -> {
