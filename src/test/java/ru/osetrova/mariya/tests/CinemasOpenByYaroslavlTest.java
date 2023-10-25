@@ -44,6 +44,7 @@ public class CinemasOpenByYaroslavlTest extends TestBase {
             attachScreenshot();
         });
 
+// либо так, для примера:
         step("Отображение меню навигации", ()->{
             kinoteatrPage
                     .checkNavigationFilms(text("Фильмы"))

@@ -42,6 +42,8 @@ public class KinoteatrHomePage {
         information.shouldHave(text("Информация"));
         hallRental.shouldHave(text("Аренда зала"));
     }
+
+    // либо так, для примера:
     @Step("Проверка {condition} для раздела навигации Фильмы")
     public KinoteatrHomePage checkNavigationFilms(Condition condition){
         movies.should(condition);
